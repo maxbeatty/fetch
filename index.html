@@ -9,6 +9,8 @@
 
 <div id=result></div>
 
+
+<p><a href=https://github.com/maxbeatty/fetch target=_blank>source available on github</a>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
 <script>
 $(function() {
@@ -19,7 +21,7 @@ $(function() {
 			{ url : $('#url').val() },
 			function(data) {
 				var result = jQuery.parseJSON(data);
-				$(this).removeAttr('disabled').text('fetch');
+				$('button').removeAttr('disabled').text('fetch');
 				$('#result').html(
 					'<img src="' + result.favicon + '" />\
 					<a href="' + $('#url').val() + '">\
