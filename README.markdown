@@ -1,1 +1,1 @@
-View example at [http://maxbeatty.github.com/fetch/](http://maxbeatty.github.com/fetch/)
+View example at [http://maxbeatty.com/fetch/](http://maxbeatty.com/fetch/)

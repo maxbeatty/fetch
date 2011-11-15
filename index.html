@@ -3,22 +3,23 @@
 <title>fetch site nice</title>
 <p>Give me an URL to retreive the title and description of the page along with the favicon
 
-<input type=text id=url name=url placeholder=http://example.com />
+<input type=text id=url name=url placeholder=http://example.com tabindex="1"/>
 
 <button type=button>fetch</button>
 
 <div id=result></div>
 
-<script src=https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
 <script>
 $(function() {
 	$('button').click(function() {
 		$(this).attr('disabled', 'disabled').text('wait');
 		$.post(
-			'fetch_site_nice.php',
+			'fetch.php',
 			{ url : $('#url').val() },
 			function(data) {
 				var result = jQuery.parseJSON(data);
+				$(this).removeAttr('disabled').text('fetch');
 				$('#result').html(
 					'<img src="' + result.favicon + '" />\
 					<a href="' + $('#url').val() + '">\
