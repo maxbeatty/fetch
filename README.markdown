@@ -1,0 +1,1 @@
+View example at [http://maxbeatty.github.com/fetch/](http://maxbeatty.github.com/fetch/)
